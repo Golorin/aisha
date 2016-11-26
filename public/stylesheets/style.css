@@ -55,7 +55,7 @@ h5 {
 
 p, a {
   font-size: 16px;
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
   line-height: 1.4em; }
 
 .medium-text {
@@ -99,9 +99,7 @@ p, a {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black; }
+  align-items: center; }
 
 .navbar {
   width: 90%;
@@ -183,15 +181,82 @@ p, a {
   .overlay.light {
     background: rgba(0, 0, 0, 0.4); }
 
-.bio {
-  background: #1A2930;
-  width: 100%;
+.flex-row, .bio, .bio .wrap, .bio .wrap .container .social-media {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px 15px; }
-  .bio .name {
-    color: #F7CF3E; }
-  .bio .contact-info {
-    width: 400px;
-    height: 200px; }
+  flex-wrap: wrap; }
+
+.flex-stack, .bio .wrap .container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+.bio {
+  min-height: 400px;
+  width: 100%;
+  padding: 10px 15px;
+  justify-content: center; }
+  .bio .wrap {
+    min-height: 400px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between; }
+    .bio .wrap .container {
+      flex-basis: 45%;
+      max-width: 400px;
+      margin: 20px 10px; }
+      .bio .wrap .container .heading h1 {
+        font-size: 5em;
+        margin-left: -2px; }
+      .bio .wrap .container .heading p {
+        font-size: 0.8em;
+        margin-top: -10px; }
+      .bio .wrap .container .description {
+        margin: 20px 0px;
+        font-size: 0.9em; }
+      .bio .wrap .container .social-media {
+        width: 75%;
+        justify-content: space-between; }
+        .bio .wrap .container .social-media .social-icon {
+          height: 40px;
+          width: 40px;
+          border-radius: 100%;
+          background: #222; }
+
+.bio .container:nth-child(1) {
+  border-right: 4px solid #1A2930;
+  padding-right: 30px; }
+
+#achievements {
+  align-items: center; }
+  #achievements .list {
+    font-family: 'Teko', sans-serif;
+    list-style-type: upper-roman; }
+    #achievements .list > li {
+      margin-bottom: 15px; }
+      #achievements .list > li:last-child {
+        margin-bottom: none !important; }
+      #achievements .list > li h3 {
+        margin-bottom: 10px; }
+
+.list li p {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.85em; }
+
+.achievement-list {
+  margin-bottom: 10px; }
+  .achievement-list li {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.85em;
+    margin: 0px 0px; }
+    .achievement-list li p.subheading {
+      font-size: 0.8em; }
+    .achievement-list li p.source {
+      font-size: 0.8em;
+      font-style: normal;
+      text-align: right; }
