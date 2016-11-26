@@ -1,0 +1,15 @@
+.bio {
+  background: $olive;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px 15px;
+  .name {
+    color: $yellow;
+  }
+  .contact-info {
+    width: 400px;
+    height: 200px;
+  }
+}
