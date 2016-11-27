@@ -220,13 +220,17 @@ p, a {
         width: 80%; } }
 
 .container {
-  margin: 15px 10px;
+  padding: 15px 10px;
   flex-basis: 100%; }
   @media screen and (min-width: 768px) {
     .container {
-      flex-basis: 45%;
+      margin: 15px 10px;
+      flex-basis: 40%;
       max-width: 400px;
       margin: 20px 10px; } }
+  @media screen and (min-width: 1000px) {
+    .container {
+      flex-basis: 42.5%; } }
   .container .heading h1 {
     font-size: 5em;
     margin-left: -2px; }

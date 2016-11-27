@@ -30,12 +30,16 @@
 
 .container {
   @extend .flex-stack;
-  margin: 15px 10px;
+  padding: 15px 10px;
   flex-basis: 100%;
   @media screen and (min-width: $break-medium) {
-    flex-basis: 45%;
+    margin: 15px 10px;
+    flex-basis: 40%;
     max-width: 400px;
     margin: 20px 10px;
+  }
+  @media screen and (min-width: $break-large) {
+    flex-basis: 42.5%;
   }
   .heading {
     h1 {
@@ -82,7 +86,7 @@
     font-family: 'Teko', sans-serif;
     @media screen and (min-width: $break-medium) {
       list-style-type: upper-roman;
-    }  
+    }
     >li {
       margin-bottom: 15px;
       &:last-child {
