@@ -67,24 +67,30 @@ p, a {
   line-height: 1em; }
 
 .banner {
+  height: 100vh;
   width: 100%;
-  height: 250px;
   background: #1A2930;
-  color: #1A2930;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media screen and (min-width: 768px) {
+    .banner {
+      height: 250px;
+      color: #1A2930; } }
 
 .banner .container {
-  background: white;
-  max-width: 700px;
-  padding: 15px 40px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center; }
+  @media screen and (min-width: 768px) {
+    .banner .container {
+      background: white;
+      max-width: 700px;
+      padding: 15px 40px; } }
   .banner .container .header h1 {
     font-size: 3.5em; }
   .banner .container p {
@@ -107,7 +113,8 @@ p, a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden; }
   .navbar .logo {
     display: block;
     padding: 15px 20px;
@@ -181,12 +188,12 @@ p, a {
   .overlay.light {
     background: rgba(0, 0, 0, 0.4); }
 
-.flex-row, .bio, .bio .wrap, .bio .wrap .container .social-media {
+.flex-row, .bio, .bio .wrap, .container .social-media {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap; }
 
-.flex-stack, .bio .wrap .container {
+.flex-stack, .container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap; }
@@ -197,48 +204,65 @@ p, a {
   padding: 10px 15px;
   justify-content: center; }
   .bio .wrap {
+    width: 100%;
     min-height: 400px;
-    width: 80%;
     justify-content: center;
     align-items: center;
     align-content: space-between; }
-    .bio .wrap .container {
+    @media screen and (min-width: 1000px) {
+      .bio .wrap {
+        width: 80%; } }
+
+.container {
+  margin: 15px 10px;
+  flex-basis: 100%; }
+  @media screen and (min-width: 768px) {
+    .container {
       flex-basis: 45%;
       max-width: 400px;
-      margin: 20px 10px; }
-      .bio .wrap .container .heading h1 {
-        font-size: 5em;
-        margin-left: -2px; }
-      .bio .wrap .container .heading p {
-        font-size: 0.8em;
-        margin-top: -10px; }
-      .bio .wrap .container .description {
-        margin: 20px 0px;
-        font-size: 0.9em; }
-      .bio .wrap .container .social-media {
-        width: 75%;
-        justify-content: space-between; }
-        .bio .wrap .container .social-media .social-icon {
-          height: 40px;
-          width: 40px;
-          border-radius: 100%;
-          background: #222; }
+      margin: 20px 10px; } }
+  .container .heading h1 {
+    font-size: 5em;
+    margin-left: -2px; }
+  .container .heading p {
+    font-size: 0.8em;
+    margin-top: -10px; }
+  .container .description {
+    margin: 20px 0px;
+    font-size: 0.9em; }
+  .container .social-media {
+    width: 90%;
+    justify-content: space-between; }
+    @media screen and (min-width: 768px) {
+      .container .social-media {
+        width: 75%; } }
+    .container .social-media .social-icon {
+      border-radius: 100%;
+      background: #222;
+      height: 40px;
+      width: 40px; }
 
-.bio .container:nth-child(1) {
-  border-right: 4px solid #1A2930;
-  padding-right: 30px; }
+@media screen and (min-width: 768px) {
+  .bio .container:nth-child(1) {
+    border-right: 4px solid #1A2930;
+    padding-right: 30px; } }
 
-#achievements {
-  align-items: center; }
-  #achievements .list {
-    font-family: 'Teko', sans-serif;
-    list-style-type: upper-roman; }
-    #achievements .list > li {
-      margin-bottom: 15px; }
-      #achievements .list > li:last-child {
-        margin-bottom: none !important; }
-      #achievements .list > li h3 {
-        margin-bottom: 10px; }
+@media screen and (min-width: 768px) {
+  #achievements {
+    align-items: center; } }
+
+#achievements .list {
+  font-family: 'Teko', sans-serif; }
+  @media screen and (min-width: 768px) {
+    #achievements .list {
+      list-style-type: upper-roman; } }
+  #achievements .list > li {
+    margin-bottom: 15px; }
+    #achievements .list > li:last-child {
+      margin-bottom: none !important; }
+    #achievements .list > li h3 {
+      margin-bottom: 10px;
+      font-size: 2em; }
 
 .list li p {
   font-family: 'Source Sans Pro', sans-serif !important;
@@ -256,7 +280,8 @@ p, a {
     margin: 0px 0px; }
     .achievement-list li p.subheading {
       font-size: 0.8em; }
-    .achievement-list li p.source {
-      font-size: 0.8em;
-      font-style: normal;
-      text-align: right; }
+    @media screen and (min-width) {
+      .achievement-list li p.source {
+        font-size: 0.8em;
+        font-style: normal;
+        text-align: right; } }
