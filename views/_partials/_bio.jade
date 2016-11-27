@@ -16,8 +16,11 @@ section.bio
         li 
           h3 Education
           for data, i in bioData
-            p.subheading #{data.schools[i].name}
-            p #{data.schools[i].dateGraduated} | #{data.schools[i].degree}
+            p.subheading University of California, San Diego
+            p 2013-2015 | B.S. in Economics and International Development
+            //- Data for the Education Portion
+            //- p.subheading #{data.schools[i].name}
+            //- p #{data.schools[i].dateGraduated} | #{data.schools[i].degree}
         li 
           h3 Honors
           ul.achievement-list 
