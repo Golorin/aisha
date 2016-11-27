@@ -82,20 +82,26 @@ p, a {
 
 .banner .container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center; }
+  flex-direction: column;
+  justify-content: center;
+  align-content: center; }
   @media screen and (min-width: 768px) {
     .banner .container {
       background: white;
       max-width: 700px;
-      padding: 15px 40px; } }
+      padding: 15px 40px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center; } }
   .banner .container .header h1 {
     font-size: 3.5em; }
   .banner .container p {
-    font-size: 0.8em;
-    flex-basis: 70%; }
+    font-size: 0.8em; }
+    @media screen and (min-width: 768px) {
+      .banner .container p {
+        flex-basis: 70%; } }
 
 .nav {
   width: 100%;
