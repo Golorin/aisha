@@ -1,0 +1,44 @@
+@import '_variables';
+
+.banner {
+  height: 100vh;
+  width: 100%;
+  background: $olive;
+  color: white;
+  @media screen and (min-width: $break-medium) {
+    height: 250px;
+    color: $olive;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .container {
+  @media screen and (min-width: $break-medium) {
+    background: white;
+    max-width: 700px;
+    padding: 15px 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  .header {
+    h1 {
+      font-size: 3.5em;
+    }
+  }
+  p {
+    font-size: 0.8em;
+    @media screen and (min-width: $break-medium) {
+      flex-basis: 70%;
+    }
+  }
+}

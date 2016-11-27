@@ -1,0 +1,23 @@
+{
+  "schools" : [
+    {"name" : "University of California, San Diego", "shortName" : "UCSD",
+      "dateEnrolled" : 2013,
+      "dateGraduated" : 2016,
+      "degree" : "B.S. in Economics & International Studies"
+    },
+    {
+      "name" : "University of Minnesota-Twin Cities",
+      "shortName" : "UMN",
+      "dateEnrolled" : 2014,
+      "dateGraduated" : 2014,
+      "degree" : "Minnesota Studies in International Development (MSID)"
+    },
+    {
+      "name" : "American River College",
+      "shortName" : "ARC",
+      "dateEnrolled" : 2011,
+      "dateGraduated" : 2013,
+      "degree" : "Associate of Arts and Sciences (AAS)"
+    }
+  ]
+}

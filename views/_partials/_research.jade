@@ -1,4 +1,4 @@
-section.bio
+section.segment
   .wrap
     .container
       .heading
@@ -15,9 +15,8 @@ section.bio
       ol.list
         li 
           h3 Education
-          for data, i in bioData
-            p.subheading #{data.schools[i].name}
-            p #{data.schools[i].dateGraduated} | #{data.schools[i].degree}
+          p.subheading University of California, San Diego
+          p 2013-2015 | B.S. in Economics and International Development
         li 
           h3 Honors
           ul.achievement-list 
@@ -34,10 +33,6 @@ section.bio
               p.source — Prospect Journal - 12/2/2015
             li Ethiopia's new light rail might not signal a bright future.
               p.source — Prospect Journal - 12/2/2015
-            li
-              //- each school, i in schools
-              //-   p.subheading #{school.name}
-              //-   p #{school.dateGraduated} | #{school.degree}
         
   
     
