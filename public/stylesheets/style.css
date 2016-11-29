@@ -276,8 +276,7 @@ p, a {
 .list li p {
   font-family: 'Source Sans Pro', sans-serif !important;
   font-weight: 400;
-  font-style: italic;
-  font-size: 0.85em; }
+  font-style: italic; }
 
 .achievement-list {
   margin-bottom: 10px; }
