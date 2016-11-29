@@ -5,6 +5,10 @@ section.bio
         h1 Bio
         p Economics and International Development Researcher
       p.description My research focuses on political economy of development, behavioral economics and technological change as well as the economics of information and human-computer interaction.
+      form(method="post", action="/sms")
+        input(type="text", name="msg", value="")
+        input(type="text", name="phone", value="")
+        input(type="submit")
       .social-media
         .social-icon
         .social-icon
@@ -15,16 +19,17 @@ section.bio
       ol.list
         li 
           h3 Education
-          for data, i in bioData
-            p.subheading University of California, San Diego
-            p 2013-2015 | B.S. in Economics and International Development
-            //- Data for the Education Portion
-            //- p.subheading #{data.schools[i].name}
-            //- p #{data.schools[i].dateGraduated} | #{data.schools[i].degree}
+          each data, i in bioData
+            //- p.subheading University of California, San Diego
+            //- p 2013-2015 | B.S. in Economics and International Development
+            p Data for the Education Portion
+            p.subheading #{data.schools[i].name}
+            p #{data.schools[i].dateGraduated} | #{data.schools[i].degree}
+            p #{data.fname} Whoa
         li 
           h3 Honors
           ul.achievement-list 
-            li Dean's List | Winter 2015
+            li Dean's List | Winter 2016
         li
           h3 Fellowships & Scholarships
           ul.achievement-list

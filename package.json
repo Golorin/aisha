@@ -19,6 +19,7 @@
     "morgan": "~1.7.0",
     "normalize-scss": "^6.0.0",
     "serve-favicon": "~2.3.0",
+    "twilio": "^2.11.1",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {

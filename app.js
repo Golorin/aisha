@@ -10,6 +10,7 @@ var db = require('monk')('localhost/bioData');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var createSMS = require('./routes/createSMS');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use(function(req,res,next){
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/sms', createSMS);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
