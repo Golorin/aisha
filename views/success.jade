@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 Congratulations! Your sms went through! Here is your message:
+  p #{sms}
+  br
+  p #{message}
+  br
+  p #{messages.sms}
+  h2 Previous Messages:
+  ul
+    each message, i in messages
+      li #{message.sid}
+        p #{message.sms}
+      
+  a(href="/") Go back home
+  

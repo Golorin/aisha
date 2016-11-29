@@ -1,0 +1,14 @@
+@import '_variables.scss';
+
+form {
+  input[type=text] {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 0px;
+    margin: 10px 0px;
+    @media screen and (min-width: $break-medium) {
+      width: 33%;
+    }
+    
+  }
+}
